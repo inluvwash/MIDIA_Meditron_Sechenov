@@ -1,0 +1,20 @@
+services:
+  ui:
+    build: .
+    command: streamlit run HealthScreening.py --server.address=0.0.0.0 --server.port=8501
+    ports:
+      - "8501:8501"
+    environment:
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  api:
+    build: .
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      HEALTHSCREENING_API_KEY: ${HEALTHSCREENING_API_KEY:-}
+    profiles: ["api"]

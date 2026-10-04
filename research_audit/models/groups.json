@@ -1,0 +1,22 @@
+{
+  "repeated_id_values": 0,
+  "extra_id_rows": 0,
+  "extra_exact_lab_profiles": 0,
+  "extra_full_37_profiles": 0,
+  "extra_full_rows": 0,
+  "independent_groups": 840,
+  "groups_by_class": {
+    "no_anemia_no_deficiency": 110,
+    "latent_deficiency": 85,
+    "iron_deficiency_anemia": 115,
+    "B12_deficiency_anemia": 65,
+    "B12_deficiency_no_anemia": 50,
+    "folate_deficiency_anemia": 50,
+    "folate_deficiency_no_anemia": 40,
+    "B6_deficiency": 35,
+    "copper_deficiency": 35,
+    "inflammation_anemia": 65,
+    "mixed_deficiency": 115,
+    "anemia_other": 75
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "dimension": "sex",
+      "group": "M",
+      "N": 244,
+      "represented_classes": 12,
+      "accuracy": 0.8729508196721312,
+      "balanced_accuracy": 0.8584493756062385,
+      "macro_f1": 0.8579062875458141,
+      "multiclass_brier": 0.2747841985476517,
+      "top_score_ece_10bins": 0.24860468758291138,
+      "acc_ci_low": 0.8278688524590164,
+      "acc_ci_high": 0.9139344262295082
+    },
+    {
+      "dimension": "sex",
+      "group": "F",
+      "N": 596,
+      "represented_classes": 12,
+      "accuracy": 0.8959731543624161,
+      "balanced_accuracy": 0.8855197320061802,
+      "macro_f1": 0.8927602856313289,
+      "multiclass_brier": 0.26052230488397343,
+      "top_score_ece_10bins": 0.26722352552782075,
+      "acc_ci_low": 0.8708053691275168,
+      "acc_ci_high": 0.9194630872483222
+    },
+    {
+      "dimension": "age",
+      "group": "60–74",
+      "N": 220,
+      "represented_classes": 12,
+      "accuracy": 0.85,
+      "balanced_accuracy": 0.8527701989086428,
+      "macro_f1": 0.8491206080388554,
+      "multiclass_brier": 0.2828110602103477,
+      "top_score_ece_10bins": 0.22391710845502538,
+      "acc_ci_low": 0.8,
+      "acc_ci_high": 0.8954545454545455
+    },
+    {
+      "dimension": "age",
+      "group": "40–59",
+      "N": 272,
+      "represented_classes": 12,
+      "accuracy": 0.9080882352941176,
+      "balanced_accuracy": 0.9071266092647671,
+      "macro_f1": 0.9088602577939398,
+      "multiclass_brier": 0.25876794387339597,
+      "top_score_ece_10bins": 0.28279804906319184,
+      "acc_ci_low": 0.8713235294117647,
+      "acc_ci_high": 0.9411764705882353
+    },
+    {
+      "dimension": "age",
+      "group": "18–39",
+      "N": 143,
+      "represented_classes": 12,
+      "accuracy": 0.9230769230769231,
+      "balanced_accuracy": 0.9125360677334363,
+      "macro_f1": 0.920078372529353,
+      "multiclass_brier": 0.2434462642970256,
+      "top_score_ece_10bins": 0.2880027195259618,
+      "acc_ci_low": 0.8741258741258742,
+      "acc_ci_high": 0.965034965034965
+    },
+    {
+      "dimension": "age",
+      "group": "75+",
+      "N": 205,
+      "represented_classes": 12,
+      "accuracy": 0.8829268292682927,
+      "balanced_accuracy": 0.8425277544666089,
+      "macro_f1": 0.8521344312614767,
+      "multiclass_brier": 0.26781711405931863,
+      "top_score_ece_10bins": 0.25637825798685476,
+      "acc_ci_low": 0.8390243902439024,
+      "acc_ci_high": 0.926829268292683
+    }
+  ],
+  "ci_method": "1500 cluster-bootstrap resamples of fixed OOF predictions; seed 20261004; accuracy only; not retraining uncertainty",
+  "macro_f1_definition": "fixed 12 labels; absent classes zero; balanced_accuracy averages represented truth classes"
+}

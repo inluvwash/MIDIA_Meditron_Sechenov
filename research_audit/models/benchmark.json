@@ -1,0 +1,366 @@
+{
+  "protocol": "fixed 5-fold SGKF seed 42, median+missing indicators within train folds; raw scores, no clinical constraints; no tuning",
+  "results": [
+    {
+      "algorithm": "LogisticRegression",
+      "accuracy": 0.8369047619047619,
+      "balanced_accuracy": 0.8399540052161537,
+      "macro_f1": 0.8372158655417646,
+      "multiclass_brier": 0.22798287128839412,
+      "top_score_ece_10bins": 0.027257954558058198,
+      "seconds": 0.17702412605285645
+    },
+    {
+      "algorithm": "DecisionTree",
+      "accuracy": 0.7488095238095238,
+      "balanced_accuracy": 0.7403098950637315,
+      "macro_f1": 0.7301151586398099,
+      "multiclass_brier": 0.4374799382263269,
+      "top_score_ece_10bins": 0.19596251643555054,
+      "seconds": 0.11147904396057129
+    },
+    {
+      "algorithm": "RandomForest",
+      "accuracy": 0.8892857142857142,
+      "balanced_accuracy": 0.8784613106416176,
+      "macro_f1": 0.8851083874210152,
+      "multiclass_brier": 0.2646650454243752,
+      "top_score_ece_10bins": 0.26181519641048984,
+      "seconds": 5.118915796279907
+    },
+    {
+      "algorithm": "GradientBoosting",
+      "accuracy": 0.8488095238095238,
+      "balanced_accuracy": 0.8383552182401287,
+      "macro_f1": 0.8467500586622521,
+      "multiclass_brier": 0.2300519582571549,
+      "top_score_ece_10bins": 0.0635737388172575,
+      "seconds": 22.13427472114563
+    },
+    {
+      "algorithm": "DemographicsOnly",
+      "accuracy": 0.07261904761904762,
+      "balanced_accuracy": 0.06876743957946004,
+      "macro_f1": 0.06625111790137317,
+      "multiclass_brier": 1.0587134526606612,
+      "top_score_ece_10bins": 0.2546652700722539,
+      "seconds": 4.796255111694336
+    },
+    {
+      "algorithm": "MissingnessOnly",
+      "accuracy": 0.2654761904761905,
+      "balanced_accuracy": 0.2672965557460442,
+      "macro_f1": 0.2469599893142654,
+      "multiclass_brier": 0.8335039148579123,
+      "top_score_ece_10bins": 0.02184491472532735,
+      "seconds": 4.69596791267395
+    },
+    {
+      "algorithm": "LabsOnly_RF",
+      "accuracy": 0.888095238095238,
+      "balanced_accuracy": 0.8789276715043979,
+      "macro_f1": 0.8831152481407772,
+      "multiclass_brier": 0.27055043226379794,
+      "top_score_ece_10bins": 0.27081508875499827,
+      "seconds": 4.718150615692139
+    }
+  ],
+  "XGBoost": {
+    "status": "not_run",
+    "reason": "xgboost not installed in available Python runtimes; no invented score"
+  },
+  "parameters": {
+    "LogisticRegression": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "standardscaler",
+          "StandardScaler()"
+        ],
+        [
+          "logisticregression",
+          "LogisticRegression(C=1, class_weight='balanced', max_iter=4000,\n                   random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "standardscaler": "StandardScaler()",
+      "logisticregression": "LogisticRegression(C=1, class_weight='balanced', max_iter=4000,\n                   random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "standardscaler__copy": true,
+      "standardscaler__with_mean": true,
+      "standardscaler__with_std": true,
+      "logisticregression__C": 1,
+      "logisticregression__class_weight": "balanced",
+      "logisticregression__dual": false,
+      "logisticregression__fit_intercept": true,
+      "logisticregression__intercept_scaling": 1,
+      "logisticregression__l1_ratio": 0.0,
+      "logisticregression__max_iter": 4000,
+      "logisticregression__n_jobs": null,
+      "logisticregression__penalty": "deprecated",
+      "logisticregression__random_state": 4205,
+      "logisticregression__solver": "lbfgs",
+      "logisticregression__tol": 0.0001,
+      "logisticregression__verbose": 0,
+      "logisticregression__warm_start": false
+    },
+    "DecisionTree": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "decisiontreeclassifier",
+          "DecisionTreeClassifier(class_weight='balanced', min_samples_leaf=2,\n                       random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "decisiontreeclassifier": "DecisionTreeClassifier(class_weight='balanced', min_samples_leaf=2,\n                       random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "decisiontreeclassifier__ccp_alpha": 0.0,
+      "decisiontreeclassifier__class_weight": "balanced",
+      "decisiontreeclassifier__criterion": "gini",
+      "decisiontreeclassifier__max_depth": null,
+      "decisiontreeclassifier__max_features": null,
+      "decisiontreeclassifier__max_leaf_nodes": null,
+      "decisiontreeclassifier__min_impurity_decrease": 0.0,
+      "decisiontreeclassifier__min_samples_leaf": 2,
+      "decisiontreeclassifier__min_samples_split": 2,
+      "decisiontreeclassifier__min_weight_fraction_leaf": 0.0,
+      "decisiontreeclassifier__monotonic_cst": null,
+      "decisiontreeclassifier__random_state": 4205,
+      "decisiontreeclassifier__splitter": "best"
+    },
+    "RandomForest": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "randomforestclassifier",
+          "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "randomforestclassifier": "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "randomforestclassifier__bootstrap": true,
+      "randomforestclassifier__ccp_alpha": 0.0,
+      "randomforestclassifier__class_weight": "balanced",
+      "randomforestclassifier__criterion": "gini",
+      "randomforestclassifier__max_depth": null,
+      "randomforestclassifier__max_features": "sqrt",
+      "randomforestclassifier__max_leaf_nodes": null,
+      "randomforestclassifier__max_samples": null,
+      "randomforestclassifier__min_impurity_decrease": 0.0,
+      "randomforestclassifier__min_samples_leaf": 2,
+      "randomforestclassifier__min_samples_split": 2,
+      "randomforestclassifier__min_weight_fraction_leaf": 0.0,
+      "randomforestclassifier__monotonic_cst": null,
+      "randomforestclassifier__n_estimators": 500,
+      "randomforestclassifier__n_jobs": -1,
+      "randomforestclassifier__oob_score": false,
+      "randomforestclassifier__random_state": 4205,
+      "randomforestclassifier__verbose": 0,
+      "randomforestclassifier__warm_start": false
+    },
+    "GradientBoosting": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "gradientboostingclassifier",
+          "GradientBoostingClassifier(random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "gradientboostingclassifier": "GradientBoostingClassifier(random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "gradientboostingclassifier__ccp_alpha": 0.0,
+      "gradientboostingclassifier__criterion": "friedman_mse",
+      "gradientboostingclassifier__init": null,
+      "gradientboostingclassifier__learning_rate": 0.1,
+      "gradientboostingclassifier__loss": "log_loss",
+      "gradientboostingclassifier__max_depth": 3,
+      "gradientboostingclassifier__max_features": null,
+      "gradientboostingclassifier__max_leaf_nodes": null,
+      "gradientboostingclassifier__min_impurity_decrease": 0.0,
+      "gradientboostingclassifier__min_samples_leaf": 1,
+      "gradientboostingclassifier__min_samples_split": 2,
+      "gradientboostingclassifier__min_weight_fraction_leaf": 0.0,
+      "gradientboostingclassifier__n_estimators": 100,
+      "gradientboostingclassifier__n_iter_no_change": null,
+      "gradientboostingclassifier__random_state": 4205,
+      "gradientboostingclassifier__subsample": 1.0,
+      "gradientboostingclassifier__tol": 0.0001,
+      "gradientboostingclassifier__validation_fraction": 0.1,
+      "gradientboostingclassifier__verbose": 0,
+      "gradientboostingclassifier__warm_start": false
+    },
+    "DemographicsOnly": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "randomforestclassifier",
+          "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "randomforestclassifier": "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "randomforestclassifier__bootstrap": true,
+      "randomforestclassifier__ccp_alpha": 0.0,
+      "randomforestclassifier__class_weight": "balanced",
+      "randomforestclassifier__criterion": "gini",
+      "randomforestclassifier__max_depth": null,
+      "randomforestclassifier__max_features": "sqrt",
+      "randomforestclassifier__max_leaf_nodes": null,
+      "randomforestclassifier__max_samples": null,
+      "randomforestclassifier__min_impurity_decrease": 0.0,
+      "randomforestclassifier__min_samples_leaf": 2,
+      "randomforestclassifier__min_samples_split": 2,
+      "randomforestclassifier__min_weight_fraction_leaf": 0.0,
+      "randomforestclassifier__monotonic_cst": null,
+      "randomforestclassifier__n_estimators": 500,
+      "randomforestclassifier__n_jobs": -1,
+      "randomforestclassifier__oob_score": false,
+      "randomforestclassifier__random_state": 4205,
+      "randomforestclassifier__verbose": 0,
+      "randomforestclassifier__warm_start": false
+    },
+    "MissingnessOnly": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "randomforestclassifier",
+          "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "randomforestclassifier": "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "randomforestclassifier__bootstrap": true,
+      "randomforestclassifier__ccp_alpha": 0.0,
+      "randomforestclassifier__class_weight": "balanced",
+      "randomforestclassifier__criterion": "gini",
+      "randomforestclassifier__max_depth": null,
+      "randomforestclassifier__max_features": "sqrt",
+      "randomforestclassifier__max_leaf_nodes": null,
+      "randomforestclassifier__max_samples": null,
+      "randomforestclassifier__min_impurity_decrease": 0.0,
+      "randomforestclassifier__min_samples_leaf": 2,
+      "randomforestclassifier__min_samples_split": 2,
+      "randomforestclassifier__min_weight_fraction_leaf": 0.0,
+      "randomforestclassifier__monotonic_cst": null,
+      "randomforestclassifier__n_estimators": 500,
+      "randomforestclassifier__n_jobs": -1,
+      "randomforestclassifier__oob_score": false,
+      "randomforestclassifier__random_state": 4205,
+      "randomforestclassifier__verbose": 0,
+      "randomforestclassifier__warm_start": false
+    },
+    "LabsOnly_RF": {
+      "memory": null,
+      "steps": [
+        [
+          "simpleimputer",
+          "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')"
+        ],
+        [
+          "randomforestclassifier",
+          "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "simpleimputer": "SimpleImputer(add_indicator=True, keep_empty_features=True, strategy='median')",
+      "randomforestclassifier": "RandomForestClassifier(class_weight='balanced', min_samples_leaf=2,\n                       n_estimators=500, n_jobs=-1, random_state=4205)",
+      "simpleimputer__add_indicator": true,
+      "simpleimputer__copy": true,
+      "simpleimputer__fill_value": null,
+      "simpleimputer__keep_empty_features": true,
+      "simpleimputer__missing_values": null,
+      "simpleimputer__strategy": "median",
+      "randomforestclassifier__bootstrap": true,
+      "randomforestclassifier__ccp_alpha": 0.0,
+      "randomforestclassifier__class_weight": "balanced",
+      "randomforestclassifier__criterion": "gini",
+      "randomforestclassifier__max_depth": null,
+      "randomforestclassifier__max_features": "sqrt",
+      "randomforestclassifier__max_leaf_nodes": null,
+      "randomforestclassifier__max_samples": null,
+      "randomforestclassifier__min_impurity_decrease": 0.0,
+      "randomforestclassifier__min_samples_leaf": 2,
+      "randomforestclassifier__min_samples_split": 2,
+      "randomforestclassifier__min_weight_fraction_leaf": 0.0,
+      "randomforestclassifier__monotonic_cst": null,
+      "randomforestclassifier__n_estimators": 500,
+      "randomforestclassifier__n_jobs": -1,
+      "randomforestclassifier__oob_score": false,
+      "randomforestclassifier__random_state": 4205,
+      "randomforestclassifier__verbose": 0,
+      "randomforestclassifier__warm_start": false
+    }
+  }
+}

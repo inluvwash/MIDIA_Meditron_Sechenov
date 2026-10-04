@@ -1,0 +1,184 @@
+{
+  "model_features": [
+    "age_years",
+    "sex",
+    "hemoglobin",
+    "RBC",
+    "hematocrit",
+    "MCV",
+    "MCH",
+    "MCHC",
+    "RDW",
+    "platelets",
+    "WBC",
+    "reticulocytes",
+    "ferritin",
+    "serum_iron",
+    "transferrin",
+    "TIBC",
+    "UIBC",
+    "TSAT",
+    "sTfR",
+    "Ret_He",
+    "vitamin_B12",
+    "active_B12",
+    "MMA",
+    "homocysteine",
+    "folate",
+    "vitamin_B6",
+    "copper",
+    "ceruloplasmin",
+    "CRP",
+    "ESR",
+    "creatinine",
+    "eGFR",
+    "TSH",
+    "albumin",
+    "LDH",
+    "indirect_bilirubin",
+    "haptoglobin"
+  ],
+  "fields": {
+    "hemoglobin": {
+      "unit": "г/л",
+      "max": 300
+    },
+    "RBC": {
+      "unit": "10^12/л",
+      "max": 15
+    },
+    "hematocrit": {
+      "unit": "%",
+      "max": 80
+    },
+    "MCV": {
+      "unit": "фл",
+      "max": 200
+    },
+    "MCH": {
+      "unit": "пг",
+      "max": 80
+    },
+    "MCHC": {
+      "unit": "г/л",
+      "max": 600
+    },
+    "RDW": {
+      "unit": "%",
+      "max": 60
+    },
+    "platelets": {
+      "unit": "10^9/л",
+      "max": 3000
+    },
+    "WBC": {
+      "unit": "10^9/л",
+      "max": 500
+    },
+    "reticulocytes": {
+      "unit": "%",
+      "max": 100
+    },
+    "ferritin": {
+      "unit": "мкг/л",
+      "max": 100000
+    },
+    "serum_iron": {
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "transferrin": {
+      "unit": "г/л",
+      "max": 10
+    },
+    "TIBC": {
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "UIBC": {
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "TSAT": {
+      "unit": "%",
+      "max": 100
+    },
+    "sTfR": {
+      "unit": "мг/л",
+      "max": 100
+    },
+    "Ret_He": {
+      "unit": "пг",
+      "max": 80
+    },
+    "vitamin_B12": {
+      "unit": "пг/мл",
+      "max": 50000
+    },
+    "active_B12": {
+      "unit": "пмоль/л",
+      "max": 5000
+    },
+    "MMA": {
+      "unit": "мкмоль/л",
+      "max": 100
+    },
+    "homocysteine": {
+      "unit": "мкмоль/л",
+      "max": 500
+    },
+    "folate": {
+      "unit": "нг/мл",
+      "max": 200
+    },
+    "vitamin_B6": {
+      "unit": "нмоль/л",
+      "max": 5000
+    },
+    "copper": {
+      "unit": "мкмоль/л",
+      "max": 200
+    },
+    "ceruloplasmin": {
+      "unit": "г/л",
+      "max": 5
+    },
+    "CRP": {
+      "unit": "мг/л",
+      "max": 1000
+    },
+    "ESR": {
+      "unit": "мм/ч",
+      "max": 200
+    },
+    "creatinine": {
+      "unit": "мкмоль/л",
+      "max": 3000
+    },
+    "eGFR": {
+      "unit": "мл/мин/1.73м2",
+      "max": 300
+    },
+    "TSH": {
+      "unit": "мМЕ/л",
+      "max": 1000
+    },
+    "albumin": {
+      "unit": "г/л",
+      "max": 100
+    },
+    "LDH": {
+      "unit": "Ед/л",
+      "max": 50000
+    },
+    "indirect_bilirubin": {
+      "unit": "мкмоль/л",
+      "max": 1000
+    },
+    "haptoglobin": {
+      "unit": "г/л",
+      "max": 10
+    }
+  },
+  "source": "Extracted from project knowledge/standardization_dict.json; technical input limits, not clinical references"
+}
